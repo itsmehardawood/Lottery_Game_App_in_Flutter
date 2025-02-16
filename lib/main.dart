@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
                 style: TextStyle(fontSize: 20),
               ),
               Text(
-                '9',
+                '19',
                 style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -62,12 +62,12 @@ class _MyAppState extends State<MyApp> {
                 height: 200,
                 width: 350,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(.85),
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: x==9 ? Column(
+                  child: x==19 ? Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
@@ -82,7 +82,7 @@ class _MyAppState extends State<MyApp> {
                             color: Colors.black, fontWeight: FontWeight.bold,fontSize: 30),
                       ),
                       Text(
-                        'You are the Winner with winning number of $x',
+                        'You are the Winner with number of $x',
                         style: TextStyle(
                             color: Colors.black, fontWeight: FontWeight.bold,fontSize: 16),
                       ),
@@ -95,12 +95,17 @@ class _MyAppState extends State<MyApp> {
                         color: Colors.red.shade800,
                         size: 35,
                       ),
+                      SizedBox(height: 10,),
                       Text(
-                        'Better Luck Next Time your number is $x try again',
+                        'Better Luck Next Time',
                         style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
+                            color: Colors.black, fontWeight: FontWeight.bold,fontSize: 24),
                       ),
-
+                      Text(
+                        'Your number is $x try again',
+                        style: TextStyle(
+                            color: Colors.black, fontWeight: FontWeight.bold,fontSize: 17),
+                      ),
                     ],
                   ),
                 ),
@@ -109,9 +114,9 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: x==9? Colors.red:Colors.green ,
+          backgroundColor: x==19? Colors.red:Colors.green ,
           onPressed: () {
-            x=random.nextInt(10);
+            x=random.nextInt(50);
             print(x);
             setState(() {
 
